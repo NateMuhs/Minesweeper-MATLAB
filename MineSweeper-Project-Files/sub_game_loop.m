@@ -11,10 +11,26 @@ userGameBoard = ones(size(hiddenGameBoard));
 
 %% Declare pre loop variables and enter the game prompts
 numDiffuse = 3;
+mineHit = false;
 
-while numDiffuse > 3 && mineHit == false
+while numDiffuse > 0 && mineHit == false
     disp(userGameBoard); % First disply game baord
-    
+
+    choice = menu('What do you want to do?', ...
+        'Diffuse a bomb', ...
+        'Investigate a location', ...
+        'Quit');
+
+    switch choice
+        case 1
+            
+        case 2
+            
+        case 3
+            disp('You quit the game before finishing, SMH.')
+            break;
+    end
+
     mineHit = true; % THIS IS JUST SO THE CODE WILL RUN RIGHT NOW
 end
 
