@@ -1,5 +1,5 @@
 function [populatedBoard] = populate_game_board(gameBoard)
-%POPULATEtempBoard populates the populatedBoard with numbers indicating the
+%POPULATE_GAME_BOARD populates the game board with numbers indicating the
 %number of bombs located around a point. the number 3 would indicate three
 %bombs located in the square surounding the location. The number 9
 %indicates a bomb.
