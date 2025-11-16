@@ -23,9 +23,9 @@ while numDiffuse > 0 && mineHit == false
 
     switch choice
         case 1
-            
+            % THIS STILL NEEDS TO BE IMPLEMENTED
         case 2
-            
+            % THIS STILL NEEDS TO BE IMPLEMENTED
         case 3
             disp('You quit the game before finishing, SMH.')
             break;
