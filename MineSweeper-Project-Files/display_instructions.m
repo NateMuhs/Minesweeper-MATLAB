@@ -1,5 +1,5 @@
-function DisplayInstructions()
-%DISPLAYINSTRUCTIONS displays the instructions for the minesweeper game
+function display_instructions()
+%DISPLAY_INSTRUCTIONS displays the instructions for the minesweeper game
 %
 %   Input: None
 %

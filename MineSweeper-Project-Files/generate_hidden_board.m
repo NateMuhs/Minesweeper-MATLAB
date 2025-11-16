@@ -1,4 +1,4 @@
-function [gameBoard] = GenerateGameBoard(x, y, numBomb)
+function [gameBoard] = generate_hidden_board(x, y, numBomb)
 %GENERATEGAMEBOARD gernerates a board game with spesified size and number
 %of bombs for the called
 %
@@ -19,4 +19,6 @@ while numBomb > 0
         numBomb = numBomb - 1;
     end
 end
+
+gameBoard = populate_game_board(gameBoard);
 end 
