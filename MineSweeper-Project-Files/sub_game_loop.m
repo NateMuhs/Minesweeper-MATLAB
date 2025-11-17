@@ -25,13 +25,19 @@ while numDiffuse > 0 && mineHit == false
         case 1
             % THIS STILL NEEDS TO BE IMPLEMENTED
         case 2
-            % THIS STILL NEEDS TO BE IMPLEMENTED
+            [rowValue, colValue] = prompt_location();
+            if hiddenGameBoard(rowValue, colValue) == 0
+                reveal_zeros(rowValue, colValue)
+            elseif hiddenGameBoard(rowValue, colValue) ~= 9
+                userGameBoard(rowValue, colValue) = hiddenGameBoard(rowValue, colValue);
+            else
+                mineHit = true;
+                disp('YOU LOST')
+            end
         case 3
             disp('You quit the game before finishing, SMH.')
             break;
     end
-
-    mineHit = true; % THIS IS JUST SO THE CODE WILL RUN RIGHT NOW
 end
 
 %% Display the final game board with rows and collums
