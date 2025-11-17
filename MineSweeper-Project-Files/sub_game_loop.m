@@ -23,11 +23,24 @@ while numDiffuse > 0 && mineHit == false
 
     switch choice
         case 1
-            % THIS STILL NEEDS TO BE IMPLEMENTED
+            [rowValue, colValue] = prompt_location();
+            userGameBoard(rowValue, colValue) = 9;
+                
+            if numDiffuse < 3
+                for row = 1:5
+                    for col = 1:5
+                        if hiddenGameBoard(row,col) == 9 && userGameBoard(row,col) ~= 9
+                            mineHit = true;
+                        else
+                            disp('CONGRADULATIONS YOU WON');
+                        end
+                    end
+                end
+            end
         case 2
             [rowValue, colValue] = prompt_location();
             if hiddenGameBoard(rowValue, colValue) == 0
-                reveal_zeros(rowValue, colValue)
+                userGameBoard = reveal_zeros(hiddenGameBoard, userGameBoard, rowValue, colValue);
             elseif hiddenGameBoard(rowValue, colValue) ~= 9
                 userGameBoard(rowValue, colValue) = hiddenGameBoard(rowValue, colValue);
             else
