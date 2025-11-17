@@ -21,6 +21,8 @@ while check > 1 % keeps looping until thereif hiddenGameBoard(selected_row,selec
                             if hiddenGameBoard(new_row,new_col) == 0 && userGameBoard(new_row,new_col) == 1 % if it is a zero on the game board
                                 userGameBoard(new_row,new_col) = hiddenGameBoard(new_row, new_col); % sets the display board to a zero
                                 check = 2; % ends while loop because all zeros have been "checked"
+                            elseif userGameBoard(new_row,new_col) ~= 9
+                                userGameBoard(new_row,new_col) = hiddenGameBoard(new_row, new_col);
                             end
                         end
                     end

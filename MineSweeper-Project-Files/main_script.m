@@ -1,5 +1,6 @@
 clear; clc
-%% This is the main script file for our code. I tried to keep it clean by adding functions.
+%% This is the main script file for our code. I tried to keep it clean by1
+% adding functions.
 
 % Always asume that if the code was run the game will be played
 status = "Yes";
