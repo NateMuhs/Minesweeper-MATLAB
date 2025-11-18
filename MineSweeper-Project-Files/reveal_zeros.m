@@ -18,7 +18,7 @@ while check > 1 % keeps looping until thereif hiddenGameBoard(selected_row,selec
                         new_row = r + ro;
                         new_col = c + co; % variables made to make code look cleaner when checking surrounding indexes
                         if 1 <= new_row && new_row <= rows && 1 <= new_col && new_col <= cols % making sure the variables are withing the borders
-                            if hiddenGameBoard(new_row,new_col) == 0 && userGameBoard(new_row,new_col) == 1 % if it is a zero on the game board
+                            if hiddenGameBoard(new_row,new_col) == 0 && userGameBoard(new_row,new_col) == 11 % if it is a zero on the game board
                                 userGameBoard(new_row,new_col) = hiddenGameBoard(new_row, new_col); % sets the display board to a zero
                                 check = 2; % ends while loop because all zeros have been "checked"
                             elseif userGameBoard(new_row,new_col) ~= 9

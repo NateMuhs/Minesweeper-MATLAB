@@ -3,10 +3,10 @@ clear; clc
 % adding functions.
 
 % Always asume that if the code was run the game will be played
-status = "Yes";
+status = "Y";
 
 %% Main game loop of minesweeper
-while status == "Yes"
+while status == "Y"
     % Instructions on how to play the game
     display_instructions();
     
@@ -14,6 +14,6 @@ while status == "Yes"
     sub_game_loop()
 
     % Prompt the user for status
-    status = input('Would you like to play Minesweeper again? enter "Yes" or "No": ', 's');
+    status = text_input('Would you like to play Minesweeper again? Enter "Y" for yes or "N" for no: ', 'YN');
 end
 
