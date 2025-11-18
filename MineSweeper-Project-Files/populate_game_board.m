@@ -4,12 +4,14 @@ function [populatedBoard] = populate_game_board(gameBoard)
 %bombs located in the square surounding the location. The number 9
 %indicates a bomb.
 %
-%   Input - gameBoard a matrix with bombs
+%   Input: gameBoard a matrix with bombs
 %
-%   Output - populatedBoard - the board populated with the amount of bombs
+%   Output: populatedBoard - the board populated with the amount of bombs
 %   surrounding a given location
 
+% Insure that the output gameboard is the same size as the input gameboard
 populatedBoard = gameBoard;
+
 
 [numRows, numCols] = size(gameBoard);
 

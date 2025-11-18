@@ -16,6 +16,6 @@ disp('  - If there are zero mines around it, all connected zero-mine spaces');
 disp('    will be revealed.');
 disp('  - Otherwise, the investigated space will display a nonzero number');
 disp('    of mines located around it.');
-disp('The game ends when all mines are successfully diffused.');
+disp('The game ends when a bomb is investegated or all diffuses are used.');
 
 end

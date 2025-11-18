@@ -1,14 +1,22 @@
 function userGameBoard = reveal_zeros(hiddenGameBoard,userGameBoard,selected_row,selected_col)
-%REVEAL_ZEROS Summary of this function goes here
-%   Detailed explanation goes here
+%REVEAL_ZEROS reveals the current location as a zero and all zeros adjasent
+%to the provided location. The function also reveals the first numbers next
+%to the zeros
+%   Input: hiddenGameBoard - the game board hidden from the user
+%          userGameBoard - the gameboard to reveal the zeros on
+%          selected_row - the row selected by the user
+%          selected_col - the collum selected by the user
+%
+%   Output: userGameBoard - the game board returned to the code with zeros
+%   revealed
 
-
-
+% Get the size
 [rows,cols] = size(hiddenGameBoard);
 
 userGameBoard(selected_row,selected_col) = 0; % sets selected index at 0
+
 check = 2;
-while check > 1 % keeps looping until thereif hiddenGameBoard(selected_row,selected_col) == 0 are no more zeros
+while check > 1 % keeps looping until until are no more zeros
     check = 0;
     for r = 1:rows
         for c = 1:cols % for loops to run through each index
@@ -21,7 +29,7 @@ while check > 1 % keeps looping until thereif hiddenGameBoard(selected_row,selec
                             if hiddenGameBoard(new_row,new_col) == 0 && userGameBoard(new_row,new_col) == 11 % if it is a zero on the game board
                                 userGameBoard(new_row,new_col) = hiddenGameBoard(new_row, new_col); % sets the display board to a zero
                                 check = 2; % ends while loop because all zeros have been "checked"
-                            elseif userGameBoard(new_row,new_col) ~= 9
+                            elseif userGameBoard(new_row,new_col) ~= 9 % If it is the first adjasent number next to the zero
                                 userGameBoard(new_row,new_col) = hiddenGameBoard(new_row, new_col);
                             end
                         end
@@ -31,6 +39,4 @@ while check > 1 % keeps looping until thereif hiddenGameBoard(selected_row,selec
         end
     end
 end
-
-
 end
