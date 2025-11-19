@@ -8,6 +8,7 @@ function sub_game_loop()
 %% generate gameboards
 hiddenGameBoard = generate_hidden_board(5, 5, 3); % Generate with project stipulations
 userGameBoard = ones(size(hiddenGameBoard)); % Generate user game board with the same size as the project stipulations
+
 % change the user game board form 1s to 11s to help the user distinguish
 for row = 1:5
     for col = 1:5
@@ -20,7 +21,7 @@ numDiffuse = 3;
 mineHit = false;
 
 while numDiffuse > 0 && mineHit == false
-    disp(userGameBoard); % First disply game baord
+    display_with_numbers(userGameBoard); % First disply game baord
     
     % User locally declared function to prompt for input
     choice = text_input(['What do you want to do? Enter "I" to investegate,' ...
@@ -76,6 +77,6 @@ end
 
 %% Display the final game board with rows and collums
 disp('This is the hidden game board that you were playing on: ');
-disp(hiddenGameBoard);
+display_with_numbers(hiddenGameBoard);
 
 end
