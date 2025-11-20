@@ -21,6 +21,7 @@ numDiffuse = 3;
 mineHit = false;
 
 while numDiffuse > 0 && mineHit == false
+    disp('Here is the gameboard');
     display_with_numbers(userGameBoard); % First disply game baord
     
     % User locally declared function to prompt for input
